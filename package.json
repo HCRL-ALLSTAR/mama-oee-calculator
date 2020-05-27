@@ -1,0 +1,24 @@
+{
+  "name": "mama-oee-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "oee_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrZIn-dev/mama-oee-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrZIn-dev/mama-oee-calculator/issues"
+  },
+  "homepage": "https://github.com/DrZIn-dev/mama-oee-calculator#readme",
+  "dependencies": {
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31"
+  }
+}
