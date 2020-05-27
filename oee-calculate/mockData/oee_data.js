@@ -146,7 +146,7 @@ const generateMockUP = (time, period, fileName) => {
 */
   let msg = {
     payload: {
-      data: arr,
+      datas: arr,
       period: period,
       runTime: time,
     },
@@ -158,7 +158,7 @@ const generateMockUP = (time, period, fileName) => {
       return;
     }
     console.log(
-      `File has been created  ${fileName}   ${msg.payload.data.length}`
+      `File has been created  ${fileName}   ${msg.payload.datas.length}`
     );
   });
 };

@@ -1,7 +1,7 @@
 const msg = require("./mockData/time_30_m.json");
 
 let payload = msg.payload;
-let data = payload.data;
+let data = payload.datas;
 let period = payload.period;
 let runTime = payload.runTime;
 
