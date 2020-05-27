@@ -1,0 +1,39 @@
+{
+  "checkweigher_1": {
+    "status": 0,
+    "standard_weight": 0,
+    "total_product": 0,
+    "good_weight": 0,
+    "not_good": 0,
+    "availability": 0
+  },
+  "checkweigher_2": {
+    "status": 0,
+    "standard_weight": 0,
+    "total_product": 0,
+    "good_weight": 0,
+    "not_good": 0,
+    "availability": 0
+  },
+  "cutting_machine": {
+    "status": 0,
+    "speed": 0,
+    "availability": 0
+  },
+  "metal_detector_1": {
+    "status": 0,
+    "speed": 0,
+    "total_product": 0,
+    "good_product": 0,
+    "not_good_product": 0,
+    "availabity": 0
+  },
+  "metal_detector_2": {
+    "status": 0,
+    "speed": 0,
+    "total_product": 0,
+    "good_product": 0,
+    "not_good_product": 0,
+    "availabity": 0
+  }
+}

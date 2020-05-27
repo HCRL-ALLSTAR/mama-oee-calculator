@@ -1,0 +1,122 @@
+{
+  "OEE_30_min": {
+    "Section_1": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    },
+    "Section_2": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    }
+  },
+  "OEE_1_hr": {
+    "Section_1": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    },
+    "Section_2": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    }
+  },
+  "OEE_4_hr": {
+    "Section_1": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_produc": 0,
+      "spend_time": 0
+    },
+    "Section_2": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    }
+  },
+  "OEE_8_hr": {
+    "Section_1": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    },
+    "Section_2": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    }
+  },
+  "OEE_24_hr": {
+    "Section_1": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    },
+    "Section_2": {
+      "oee": 0,
+      "availabity": 0,
+      "performance": 0,
+      "quality": 0,
+      "production_target": 0,
+      "total_product": 0,
+      "good_product": 0,
+      "not_good_product": 0,
+      "spend_time": 0
+    }
+  }
+}
