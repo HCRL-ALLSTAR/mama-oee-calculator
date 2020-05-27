@@ -31,8 +31,8 @@ const schema = {
 const toggleGenerator = () => {
   return Math.round(Math.random());
 };
-const productGenerator = () => {
-  return Math.floor(Math.random() * 50) + 1;
+const productGenerator = (max) => {
+  return Math.floor(Math.random() * max);
 };
 const varToString = (varObj) => Object.keys(varObj)[0];
 let period = 10;
@@ -87,42 +87,63 @@ const generateMockUP = (time, period, fileName) => {
     let CW_LB1_status = toggleGenerator();
     let CW_LB2_status = toggleGenerator();
     let cm_cutting = toggleGenerator();
+
+    item.cm_cutting = Boolean(cm_cutting);
+    if (cm_cutting === 1) {
+      item.cm_cut_count = productGenerator(50);
+      item.cm_cut_freq = parseFloat(Math.random().toFixed(2));
+    }
+
+    let inputMD_1 = Math.floor(item.cm_cut_count / 2);
+    let inputMD_2 = item.cm_cut_count - inputMD_1;
+
     item.MD_LB1_status = MD_LB1_status;
     if (MD_LB1_status === 1) {
-      item.MD_LB1_ng_count = productGenerator();
-      item.MD_LB1_ok_count = productGenerator();
+      item.MD_LB1_ok_count = productGenerator(inputMD_1);
+      item.MD_LB1_ng_count = inputMD_1 - item.MD_LB1_ok_count;
       item.MD_LB1_total_count = item.MD_LB1_ng_count + item.MD_LB1_ok_count;
     }
 
     item.MD_LB2_status = MD_LB2_status;
     if (MD_LB2_status === 1) {
-      item.MD_LB2_ng_count = productGenerator();
-      item.MD_LB2_ok_count = productGenerator();
+      item.MD_LB2_ok_count = productGenerator(inputMD_2);
+      item.MD_LB2_ng_count = inputMD_2 - item.MD_LB2_ok_count;
       item.MD_LB2_total_count = item.MD_LB2_ng_count + item.MD_LB2_ok_count;
     }
 
+    let totalPassMD = item.MD_LB1_ok_count + item.MD_LB2_ok_count;
+    let inputCW_1 = Math.floor(totalPassMD / 2);
+    let inputCW_2 = totalPassMD - inputCW_1;
+
     item.CW_LB1_status = CW_LB1_status;
     if (CW_LB1_status === 1) {
-      item.CW_LB1_ng_count = productGenerator();
-      item.CW_LB1_pass_count = productGenerator();
+      item.CW_LB1_pass_count = productGenerator(inputCW_1);
+      item.CW_LB1_ng_count = inputCW_1 - item.CW_LB1_pass_count;
       item.CW_LB1_total_count = item.CW_LB1_ng_count + item.CW_LB1_pass_count;
     }
 
     item.CW_LB2_status = CW_LB2_status;
     if (CW_LB2_status === 1) {
-      item.CW_LB2_ng_count = productGenerator();
-      item.CW_LB2_pass_count = productGenerator();
+      item.CW_LB2_pass_count = productGenerator(inputCW_2);
+      item.CW_LB2_ng_count = inputCW_2 - item.CW_LB2_pass_count;
       item.CW_LB2_total_count = item.CW_LB2_ng_count + item.CW_LB2_pass_count;
-    }
-    item.cm_cutting = Boolean(cm_cutting);
-    if (cm_cutting === 1) {
-      item.cm_cut_count = productGenerator();
-      item.cm_cut_freq = parseFloat(Math.random().toFixed(2));
     }
 
     arr.push(item);
   }
-
+  /*
+  console.log(`Item From Cutting Machine  : ${item.cm_cut_count}`);
+  console.log(`Input MD  1                : ${inputMD_1}`);
+  console.log(`Input MD  2                : ${inputMD_2}`);
+  console.log(
+    `Total MD                   : ${
+      item.MD_LB1_total_count + item.MD_LB2_total_count
+    }`
+  );
+  console.log(`Total Pass MD              : ${totalPassMD}`);
+  console.log(`Input Cw 1                 : ${inputCW_1}`);
+  console.log(`Input Cw 2                 : ${inputCW_2}`);
+*/
   let msg = {
     payload: {
       data: arr,
