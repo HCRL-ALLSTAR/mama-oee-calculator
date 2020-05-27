@@ -50,10 +50,33 @@ let totalRunTime = data.reduce((total, data) => {
   return total + time;
 }, 0);
 
+let not_good_product = data.reduce((total, data) => {
+  let CW_LB1_ng_count = data.CW_LB1_ng_count;
+  if (CW_LB1_ng_count < 0) CW_LB1_ng_count = 0;
+  let CW_LB2_ng_count = data.CW_LB2_ng_count;
+  if (CW_LB2_ng_count < 0) CW_LB2_ng_count = 0;
+  let totalNG = CW_LB1_ng_count + CW_LB2_ng_count;
+  return total + totalNG;
+}, 0);
+
+let production_target = 60 * (runTime / 60);
+
 avalibility = totalRunTime / runTime;
 performance = totalCW / totalPassMD;
 quality = totalPassCW / totalCW;
 oee = avalibility * performance * quality;
+
+let oee_obj = {
+  oee: oee,
+  avalibility: avalibility,
+  performance: performance,
+  quality: quality,
+  production_target: production_target,
+  total_product: totalCW,
+  good_product: totalPassCW,
+  not_good_product: not_good_product,
+  spend_time: totalRunTime,
+};
 
 console.log(`Total Check Weight     : ${totalCW}`);
 console.log(`Total Total Pass MD    : ${totalPassMD}`);

@@ -82,10 +82,11 @@ const not_good_product_sec_2 = data.reduce((total, data) => {
 const spend_time_sec_2 = data.reduce((total, data) => {
   let time = 0;
   if (
-    data.MD_LB1_status &&
-    data.MD_LB2_status &&
     data.CW_LB1_status &&
-    data.CW_LB2_status
+    data.CW_LB2_status &&
+    data.MD_LB2_status &&
+    data.MD_LB1_status &&
+    data.cm_cutting
   )
     time = period;
   return total + time;
@@ -95,7 +96,7 @@ console.log("Option Data Sec 1");
 console.log(`Total Product      : ${total_product_sec_1}`);
 console.log(`Total Good         : ${good_product_sec_1}`);
 console.log(`Total Not Good     : ${not_good_product_sec_1}`);
-console.log(`Spend Time         : ${spend_time_sec_1}`);
+
 console.log("Option Data Sec 2 ");
 console.log(`Production Target  : ${production_target}`);
 console.log(`Total Product      : ${total_product_sec_2}`);
