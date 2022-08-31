@@ -19,6 +19,6 @@
   "homepage": "https://github.com/DrZIn-dev/mama-oee-calculator#readme",
   "dependencies": {
     "moment": "^2.26.0",
-    "moment-timezone": "^0.5.31"
+    "moment-timezone": "^0.5.35"
   }
 }
